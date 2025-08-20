@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+:root {
+    --font1
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #e6e6de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(#523f31, #d1b7a5);
+    height: 50px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(241, 238, 238);
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+nav input {}
+
+nav a:hover {
+    background-image: linear-gradient(#a88168, #523f31);
+    padding: 6px;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px black;
+}
+
+main {
+    background-color: #e6e6de;
+}
+
+.carousel-container {
+    position: relative; /* Essencial para posicionar os botões em relação a este contêiner */
+    width: 800px; /* Largura do seu carrossel */
+    height: 400px; /* Altura do seu carrossel */
+    margin: 50px auto; /* Centraliza o carrossel na página */
+    overflow: hidden; /* Esconde as imagens que estão fora da área de visualização */
+}
+
+.carousel-images {
+    display: flex; /* Para alinhar as imagens lado a lado */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    display: none; /* Esconde todas as imagens por padrão */
+}
+
+.carousel-img.active {
+    display: block; /* Apenas a imagem com a classe 'active' será mostrada */
+}
+
+.prev-btn, .next-btn {
+    position: absolute; /* Para posicioná-los sobre a imagem */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(15, 13, 13);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem na frente das imagens */
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171; /* A bolinha ativa terá uma cor diferente */
+}
+
+.destaque {
+    text-align: center;
+    color: white;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    text-shadow:  2px 2px 5px black;;
+}
+
+.destaque-todos {
+    display: inline-block;
+    width: 130px;
+    background-color: white;
+    color: #523f31;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    border-radius: 5px 0px 0px 5px;
+    padding: 3px 0px 3px 3px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.ver-mais{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a99588;
+    border-radius: 0px 5px 5px 0px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.97);
+}
+.ver-mais:hover{
+    color: white;
+    background-color: #686462;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.lista-produtos {
+    display: flex; /* Transforma o contêiner em um Flexbox */
+    justify-content: center; /* Alinha os produtos no centro da linha */
+    gap: 30px; /* Adiciona um espaçamento entre os quadros */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}                                                                       
+
+.produto-card {
+    background-color: #ffffff;
+    display: flex; /* Transforma o contêiner em um Flexbox */
+    align-items: top center; /* Alinha a imagem e o texto verticalmente no centro */
+    gap: 20px; /* Cria um espaço entre a imagem e o texto */
+    border: 1px solid #b2adad;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto; /* Centraliza o quadro na página para visualização */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para a imagem */
+.produto-imagem img {
+    width: 150px; /* Largura da imagem, ajuste conforme a sua imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px black;
+}
+
+/* Estilos para o contêiner de informações */
+.produto-info {
+    display: flex;
+    flex-direction: column; /* Alinha o título e o preço um embaixo do outro */
+}
+
+/* Estilos para o título do produto */
+.produto-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 10px 0; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para o preço do produto */
+.produto-preco {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Cor verde para o preço */
+    margin: 0;
+}

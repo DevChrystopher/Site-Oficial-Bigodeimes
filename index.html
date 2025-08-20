@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigodeimes</title>
+    <link rel="shortcut icon" href="../imagens/Logo (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-links">
+                <a href="index.html">HOME</a>
+                <a href="#">CONSOLE</a>
+                <a href="#">JOGOS</a>
+                <a href="#">ACESSÓRIOS</a>
+                <a href="#">FIGURES</a>
+                <a href="#">VÍDEOS</a>
+                <a href="#">ANÁLISES</a>
+                <a href="#">CONTATO</a>
+            </div>
+            <div class="search-box">
+                <input type="search" name="busca" id="ibusca" placeholder="Pesquise no site"></input>
+            </div>
+        </nav>
+        <img class="banner" src="imagens/banner.png" alt="logo-site">
+    </header>
+    <main>
+        <hr style="box-shadow: 2px 2px 5px black;">
+        <section class="carousel-container">
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+
+            <div class="carousel-images">
+                <img src="imagens/3.png" alt="Descrição da Imagem 1" class="carousel-img active">
+                <img src="imagens/4.png" alt="Descrição da Imagem 2" class="carousel-img">
+                <img src="imagens/5.png" alt="Descrição da Imagem 3" class="carousel-img">
+            </div>
+
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const images = document.querySelectorAll('.carousel-img');
+                const dots = document.querySelectorAll('.dot');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                let currentIndex = 0;
+                function showImage(index) {
+                    // Remove a classe 'active' de todos os elementos
+                    images.forEach(img => img.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    // Adiciona a classe 'active' para a imagem e a bolinha do índice atual
+                    images[index].classList.add('active');
+                    dots[index].classList.add('active');
+                }
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                    showImage(currentIndex);
+                });
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                    showImage(currentIndex);
+                });
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentIndex = index;
+                        showImage(currentIndex);
+                    });
+                });
+            });
+        </script>
+
+        <div>
+            <h2 class="destaque">DESTAQUES</h2>
+        </div>
+        <div>
+            <h3 class="destaque-todos">CONSOLES</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <div class="lista-produtos">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="destaque-todos">JOGOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <div class="lista-produtos">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="destaque-todos">ACESSÓRIOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <div class="lista-produtos">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="destaque-todos">FIGURES</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <div class="lista-produtos">
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
+                    </div>
+
+                    <div class="produto-info">
+                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
+                        <p class="produto-preco">R$ 4.349,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="destaque-todos">VÍDEOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <a href="#"><img src="imagens/6.png" alt="sample"></a>
+            <a href="#"><img src="imagens/7.png" alt="sample"></a>
+            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+        </div>
+        <div>
+            <h3 class="destaque-todos">ANÁLISES</h3><a href="#" class="ver-mais">Ver +</a> <br>
+            <a href="#"><img src="imagens/6.png" alt="sample"></a>
+            <a href="#"><img src="imagens/7.png" alt="sample"></a>
+            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+        </div>
+
+    </main>
+    <FOOTer>
+
+    </FOOTer>
+
+</body>
+
+</html>
