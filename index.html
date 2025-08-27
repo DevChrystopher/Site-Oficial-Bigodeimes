@@ -12,236 +12,690 @@
 <body>
     <header>
         <nav>
-            <div class="menu-links">
-                <a href="index.html">HOME</a>
-                <a href="#">CONSOLE</a>
-                <a href="#">JOGOS</a>
-                <a href="#">ACESSÓRIOS</a>
-                <a href="#">FIGURES</a>
-                <a href="#">VÍDEOS</a>
-                <a href="#">ANÁLISES</a>
-                <a href="#">CONTATO</a>
-            </div>
-            <div class="search-box">
-                <input type="search" name="busca" id="ibusca" placeholder="Pesquise no site"></input>
-            </div>
+            <a href="#home">HOME</a>
+            <a href="#console">CONSOLES</a>
+            <a href="#jogos">JOGOS</a>
+            <a href="#acessorios">ACESSÓRIOS</a>
+            <a href="#figures">FIGURES</a>
+            <a href="#videos">VÍDEOS</a>
+            <!-- <a href="#analises">ANÁLISES</a>
+            <a href="#contato">CONTATO</a> -->
         </nav>
         <img class="banner" src="imagens/banner.png" alt="logo-site">
     </header>
     <main>
-        <hr style="box-shadow: 2px 2px 5px black;">
-        <section class="carousel-container">
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
 
-            <div class="carousel-images">
-                <img src="imagens/3.png" alt="Descrição da Imagem 1" class="carousel-img active">
-                <img src="imagens/4.png" alt="Descrição da Imagem 2" class="carousel-img">
-                <img src="imagens/5.png" alt="Descrição da Imagem 3" class="carousel-img">
-            </div>
+        <div class="home" id="home">
 
-            <div class="carousel-indicators">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </section>
+            <h1>Boas Vindas ao Seu canal de Nostalgia e Nintendo</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H0X3N81mMWQ?si=3lgjCUA6zt_sToZ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const images = document.querySelectorAll('.carousel-img');
-                const dots = document.querySelectorAll('.dot');
-                const prevBtn = document.querySelector('.prev-btn');
-                const nextBtn = document.querySelector('.next-btn');
-                let currentIndex = 0;
-                function showImage(index) {
-                    // Remove a classe 'active' de todos os elementos
-                    images.forEach(img => img.classList.remove('active'));
-                    dots.forEach(dot => dot.classList.remove('active'));
-                    // Adiciona a classe 'active' para a imagem e a bolinha do índice atual
-                    images[index].classList.add('active');
-                    dots[index].classList.add('active');
-                }
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-                    showImage(currentIndex);
-                });
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-                    showImage(currentIndex);
-                });
-                dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        currentIndex = index;
-                        showImage(currentIndex);
-                    });
-                });
-            });
-        </script>
+            <p>
+                <a class="link-discord" href="https://discord.com/invite/xVg872vbHh" target="_blank">Entre no Nosso Discord <img class="icone-discord" src="imagens/discord_icon.png" alt="icone-discord"></a>  
+                <a class="link-whatsapp" href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            </p>
+            <p> &#8595Vejam aqui em baixo minhas Recomendações de compras pra vocês! &#8595</p>
 
-        <div>
-            <h2 class="destaque">DESTAQUES</h2>
+
         </div>
-        <div>
-            <h3 class="destaque-todos">CONSOLES</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <div class="lista-produtos">
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
 
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+        <div class="sessoes">
+            <h2 class="titulo" id="console">CONSOLES</h2> <a class="link-whatsapp"
+                href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            <p class="destaque-ofertas">Recomendações do Canal Bigodeimes - Última atualização em 21/8</p><a
+                class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+
+        <div class="lista-produtos">
+            <div class="produto">
+                <p class="produto-titulo">Nintendo Switch 2 Original <br>
+                    256GB de Memória <br> Preto</p>
+                <img src="imagens/ns2.jpg" alt="ns2">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/4L9L8A1Y5L" target="_blank">Shopee: R$
+                        3.993,00</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1BuNTYU" target="_blank">Mercado
+                        Livre: R$ 4.498,00</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Nintendo Switch Original <br> Versão Oled <br>64GB de Memória</p>
+                <img src="imagens/nsoled+mariokart.jpg" alt="nsoled+mariokart">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5feijSIunT" target="_blank">Shopee: R$
+                        2.363,90</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1VgyHHX" target="_blank">Mercado
+                        Livre: R$ 2.363,90</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Nintendo Switch Original <br> Versão V.2 <br>32GB de Memória</p>
+                <img src="imagens/nsv2+mariokart.jpg" alt="nsv2+mariokart">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6fXFrETSV6" target="_blank">Shopee: R$
+                        1.999,00</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/2Y6Ef2z" target="_blank">Mercado
+                        Livre: R$ 2.045,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Nintendo Switch Original <br> Versão Lite <br>32GB de Memória (azul)</p>
+                <img src="imagens/nsliteazul.jpg" alt="nsliteazul">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/LdCOLrCG4" target="_blank">Shopee: R$
+                        1.999,90</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1d7ZMZy" target="_blank">Mercado
+                        Livre: R$ 1.382,25</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Nintendo Switch Original <br> Versão Lite <br> 32GB de Memória (turquesa)</p>
+                <img src="imagens/nsliteturquesa.jpg" alt="nsliteturquesa">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1g8Zz0u4L8" target="_blank">Shopee: R$
+                        1.399,90</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/31cmPXx" target="_blank">Mercado
+                        Livre: R$ 1.276,13</a>
                 </div>
             </div>
         </div>
-        <div>
-            <h3 class="destaque-todos">JOGOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <div class="lista-produtos">
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
 
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+        <div class="sessoes">
+            <h2 class="titulo" id="jogos">JOGOS</h2><a class="link-whatsapp"
+                href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            <p class="destaque-ofertas">Recomendações do Canal Bigodeimes - Última atualização em 21/8</p><a
+                class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+
+        <div class="lista-produtos">
+            <div class="produto">
+                <p class="produto-titulo">Super Smash Bros <br>Ultimate<br> - Mídia Física -
+                </p>
+                <img src="imagens/jogonssupersmashbros.jpg" alt="smashbros">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/9znhyIcof1" target="_blank">Shopee: R$
+                        349,89</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1eVAk7X" target="_blank">Mercado
+                        Livre: R$ 309,28</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Xenoblade Chronicles X Definitive Edition<br> - Mídia Física -</p>
+                <img src="imagens/jogoxenobladechronxdef.jpg" alt="xenodef">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6VDpoD83WZ" target="_blank">Shopee: R$
+                        349,89</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1v2CyjF" target="_blank">Mercado
+                        Livre: R$ 328,03</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Super Mario Party <br>Jamboree<br>- Mídia Física -</p>
+                <img src="imagens/jogonsmariopartyjamboree.jpg" alt="jamboree">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/8AM3nNqdLG" target="_blank">Shopee: R$
+                        359,89</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/19G7kYN" target="_blank">Mercado
+                        Livre: R$ 309,28</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">The Legend of Zelda: Echoes of Wisdom<br>- Mídia Física -</p>
+                <img src="imagens/jogonszeldaechoes.jpg" alt="zeldaechoes">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/10M4a3GyI" target="_blank">Shopee: R$329,90</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/2pEQHQ4" target="_blank">Mercado
+                        Livre: R$ 316,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Super Mario Bros <br>Wonder<br>- Mídia Física -</p>
+                <img src="imagens/jogonsmariowonder.jpg" alt="mariowonder">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2LOGqz9A4w" target="_blank">Shopee: R$
+                        329,89</a>
+                    <a class="link-mercadolivre" href="https://mercadolivre.com/sec/1v2zyu1" target="_blank">Mercado
+                        Livre: R$ 309,28</a>
                 </div>
             </div>
         </div>
-        <div>
-            <h3 class="destaque-todos">ACESSÓRIOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <div class="lista-produtos">
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
 
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+        <div class="sessoes">
+            <h2 class="titulo" id="acessorios">ACESSÓRIOS</h2><a class="link-whatsapp"
+                href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            <p class="destaque-ofertas">Recomendações do Canal Bigodeimes - Última atualização em 21/8</p><a
+                class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+
+
+        <div class="lista-produtos">
+            <div class="produto">
+                <p class="produto-titulo">Joy-Con Alternativo<br>Par com Straps</p>
+                <img src="imagens/joyconparalelo.jpg" alt="joyparelelo">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/7V6NIgr0R4" target="_blank">Shopee: R$
+                        209,99</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">ProController Alternativo<br>Com TURBO</p>
+                <img src="imagens/procontroleparalelo.jpg" alt="proparalelo">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/9fArss3l6C" target="_blank">Shopee: R$
+                        144,90</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">ProContoller Original<br>Preto</p>
+                <img src="imagens/procontroleorigi.jpg" alt="procontrol">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1g8aMLCio9" target="_blank">Shopee: R$
+                        419,89</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Maleta Completa c/ Alça<br>V1, V2, OLED</p>
+                <img src="imagens/malatop.jpg" alt="malatop">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2VhiWnmEWv" target="_blank">Shopee: R$
+                        137,50</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Case PRO Switch e Controle<br>V1, V2, OLED</p>
+                <img src="imagens/caseprons1.jpg" alt="casetop">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/BJnlXVGQ1" target="_blank">Shopee: R$ 93,56</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">KIT Case Portátil OLED<br>9 Acessórios</p>
+                <img src="imagens/kitcase.jpg" alt="kitcase">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2g17Yt8BqZ" target="_blank">Shopee: R$79,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Capa Nintendo Swicth OLED<br>Cores</p>
+                <img src="imagens/capaoledfull.jpg" alt="capalite">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/8AM508scIJ" target="_blank">Shopee: R$
+                        34,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Capa Nintendo Swicth Lite<br>Cores</p>
+                <img src="imagens/capalitefull.jpg" alt="capaoled">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6Ab0upkVPu" target="_blank">Shopee Apartir: R$
+                        62,39</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Capa Nintendo Swicth 2<br>Switch e Joy-Con</p>
+                <img src="imagens/capans2full.jpg" alt="capans2">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3LGpWl8J1h" target="_blank">Shopee: R$
+                        109,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Case Nintendo Swicth<br>Pokémon Vermelho</p>
+                <img src="imagens/casepokemon.png" alt="capapokemon">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/7fPoPtCbdr" target="_blank">Shopee: R$
+                        85,89</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Case Nintendo Swicth<br>Animal Crossing Verde</p>
+                <img src="imagens/caseanimal.jpg" alt="caseverde">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/9znjV3xcXv" target="_blank">Shopee: R$
+                        69,99</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pelicula Nintendo Switch 2<br>Vidro Temperado</p>
+                <img src="imagens/peliculas2.jpg" alt="peliculans2">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5fek1nzWLB" target="_blank">Shopee: R$
+                        69,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Kit 2 Peliculas Nintendo Switch Oled</p>
+                <img src="imagens/peliculas1.jpg" alt="2peliculans">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2qKYehQ22p" target="_blank">Shopee: R$
+                        24,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Capa Joy-Con Silicone<br>NS2 Cores</p>
+                <img src="imagens/capajoyns2.png" alt="capajoyns2">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5pyAXCVNrb" target="_blank">Shopee: R$
+                        29,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Par Straps Alternativo<br>Cores</p>
+                <img src="imagens/strapsparalelo.png" alt="strapsparalelo">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6fXHENvHTO" target="_blank">Shopee Apartir: R$
+                        29,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Mouse Adaptador<br>Swicth 2</p>
+                <img src="imagens/mousens2.jpg" alt="mousegrip">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6KuR7vzH9B" target="_blank">Shopee: R$
+                        47,51</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Joy-Con Adaptador<br>NS 2 - Cores</p>
+                <img src="imagens/gripadaptns2.jpg" alt="gripadapns2">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6pqhRLiU6E" target="_blank">Shopee Apartir: R$
+                        54,45</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Joy-Con Adaptador<br>NS 1 - Cores</p>
+                <img src="imagens/gripadaptns1.jpg" alt="gripadapns1">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/20lRubPP15" target="_blank">Shopee: R$
+                        49,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip suporte Joy-Con <br>Original</p>
+                <img src="imagens/adaptadorigriporiginal.png" alt="gripjoy">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6fXHEVeIfV" target="_blank">Shopee: R$
+                        208,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Joy-Con Carregador <br>Switch 1</p>
+                <img src="imagens/gripcarrega.jpg" alt="gripjoycarreg">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1LVl9Ke6nu" target="_blank">Shopee: R$
+                        49,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Carregador de Controles<br>Até 4 Joy-Con</p>
+                <img src="imagens/carregacontrole.jpg" alt="carregajoy">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2B4s6Mkke1" target="_blank">Shopee: R$
+                        49,99</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Joy-Con Decorado<br>Modelos</p>
+                <img src="imagens/gripdecorado.jpg" alt="gripdecorado">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/8fILcGv458" target="_blank">Shopee Apartir: R$
+                        39,92</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip Joy-Con Volante<br>Cores</p>
+                <img src="imagens/gripvolante.jpg" alt="gripvolante">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/8UyveGL80k" target="_blank">Shopee: R$
+                        48,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Kit 4 Elásticos para Joy-Con<br>Braços e Pernas</p>
+                <img src="imagens/elasticos1.png" alt="elasticojoycon">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/4L9MgnRC1V" target="_blank">Shopee: R$
+                        63,49</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Kit 10 Grips<br>Esportes</p>
+                <img src="imagens/kit10grips.jpg" alt="10grips">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/gG4LKe2Nd" target="_blank">Shopee: R$
+                        158,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Super Kit 18 Grips<br>Esportes</p>
+                <img src="imagens/kit18grip.jpg" alt="18grips">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/30dz7sKI92" target="_blank">Shopee: R$
+                        328,49</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte Joy-Con e Straps<br>Até 4 Joy-Con</p>
+                <img src="imagens/portajoyegrips.jpg" alt="suportejoy4">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/qZUa7GnCd" target="_blank">Shopee: R$ 26,60</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Flip Grip Vertical<br>NS Oled</p>
+                <img src="imagens/flipgrip.jpg" alt="flipgrip">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/LdDh4kVgs" target="_blank">Shopee: R$ 64,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Carregador Dock e Joy-Con<br>NS Oled</p>
+                <img src="imagens/carregadorfull.jpg" alt="carregadocjoy">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2qKYfq69Qa" target="_blank">Shopee: R$
+                        63,49</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte para Dock Decorado<br>V1, V2, Oled</p>
+                <img src="imagens/basemario.jpg" alt="carregadocjoy">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/8Uyveij0zV" target="_blank">Shopee: R$
+                        69,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Grip com Suporte e Porta Cartão Switch v2 e Oled</p>
+                <img src="imagens/capasuporte.jpg" alt="gripsuporte">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5AiTg4usl0" target="_blank">Shopee: R$
+                        85,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Carregador Suporte para Jogos Switch Oled</p>
+                <img src="imagens/portajogosfullcarrega.jpg" alt="multsuporte">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3VaFi6wJ3x" target="_blank">Shopee: R$
+                        110,49</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte Switch Decorado<br>Pokecenter</p>
+                <img src="imagens/basepokecenter.jpg" alt="suportepokecenter">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/4ApwXfwF5X" target="_blank">Shopee: R$
+                        237,50</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Capa para Jogos Vazia<br>Plástico Branco</p>
+                <img src="imagens/caixatransparente.jpg" alt="capaplastica">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/2qKYtSce4y" target="_blank">Shopee: R$
+                        30,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte para Jogos Decorado<br>Modelos</p>
+                <img src="imagens/portajogosdecorado.jpg" alt="suportejogos">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/6VDrHG2QVR" target="_blank">Shopee Apartir: R$
+                        37,99</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte para Jogos Acrílico<br>Vermelho</p>
+                <img src="imagens/portajogosacrilico.jpg" alt="suportejogosacrilico">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/AKQZsKyX0Y" target="_blank">Shopee: R$
+                        89,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte para Jogos Pokédex<br>48 Cartuchos</p>
+                <img src="imagens/portajogopokedex.jpg" alt="cartuchopokedex">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1qS1lTGIxs" target="_blank">Shopee: R$
+                        153,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Mini Case para Jogos<br>10 Cartuchos</p>
+                <img src="imagens/casecartucho.jpg" alt="minicartucho">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/9AEcVi9Y6g" target="_blank">Shopee: R$
+                        22,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Dock Portátil<br>Cores</p>
+                <img src="imagens/dockportatil.jpg" alt="dockportatil">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/60HagtzXb2" target="_blank">Shopee: R$
+                        60,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Dock Portátil CABO<br>2 metros</p>
+                <img src="imagens/dockportatilusbc.jpg" alt="dockportatilcabo">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/7fPogaqdpd" target="_blank">Shopee: R$
+                        59,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Suporte de Parede<br>NS 1</p>
+                <img src="imagens/suporteparedens.jpg" alt="suparede">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/LdDwaMXUw" target="_blank">Shopee: R$ 29,93</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Fonte Original Padrão BR<br>Nintendo Switch</p>
+                <img src="imagens/fonteorigi.jpg" alt="fonte">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1BCKxlMiAB" target="_blank">Shopee: R$
+                        179,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Moldura para Jogos<br>Cores</p>
+                <img src="imagens/molduragame.jpg" alt="moldura">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1LVlAHcpAf" target="_blank">Shopee: R$
+                        27,99</a>
                 </div>
             </div>
         </div>
-        <div>
-            <h3 class="destaque-todos">FIGURES</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <div class="lista-produtos">
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
 
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+        <div class="sessoes">
+            <h2 class="titulo" id="figures">FIGURES</h2><a class="link-whatsapp"
+                href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            <p class="destaque-ofertas">Recomendações do Canal Bigodeimes - Última atualização em 21/8</p><a
+                class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+
+        <div class="lista-produtos">
+            <div class="produto">
+                <p class="produto-titulo">Pokémon Umbreon na Lua<br>Miniatura 3D 9cm</p>
+                <img src="imagens/umbreonfig.jpg" alt="umbreonfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5Aicuwm9gQ" target="_blank">Shopee: R$ 127,41</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pokémon Espeon na Lua<br>Miniatura 3D 9cm</p>
+                <img src="imagens/espeonfig.jpg" alt="espeonfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1g8klimmaD" target="_blank">Shopee: R$ 127,41</a>
                 </div>
-                <div class="produto-card">
-                    <div class="produto-imagem">
-                        <img src="imagens/6.png" alt="Bundle Nintendo Switch 2 + Mario Kart World">
-                    </div>
-
-                    <div class="produto-info">
-                        <h2 class="produto-titulo">Bundle Nintendo Switch 2 + Mario Kart World</h2>
-                        <p class="produto-preco">R$ 4.349,00</p>
-                    </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pokémon Gengar Bola Sombria Miniatura 3D 7cm</p>
+                <img src="imagens/gengarfig.jpg" alt="gengarfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/5VLTLVgYWd" target="_blank">Shopee: R$ 90,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pokémon Slorlax Cerveja<br>Miniatura 3D 12 a 25cm</p>
+                <img src="imagens/snorlaxbeerfig.jpg" alt="snorlaxbeerfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/AKQj6OO9ia" target="_blank">Shopee Apartir: R$ 54,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pokémon Blastoise<br>Miniatura 3D 18cm</p>
+                <img src="imagens/blastoisefig.jpg" alt="blastoisefig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/AUk9IhNWNd" target="_blank">Shopee: R$ 110,00</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Gon ou Killua<br>PVC 13cm</p>
+                <img src="imagens/gonfig.jpg" alt="gonfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3ftpB81wSf" target="_blank">Shopee: R$ 52,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Vegeta Clássico<br>PVC 21cm</p>
+                <img src="imagens/vegetafig.jpg" alt="vegetafig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3VaOyp2Zne" target="_blank">Shopee: R$ 79,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Monkey D. Luffy Haki<br>PVC 22cm</p>
+                <img src="imagens/monkeysupfig.jpg" alt="monkeysupfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3LGymW3D8d" target="_blank">Shopee: R$ 67,99</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Spider Man Miles Morales<br>PVC 13cm</p>
+                <img src="imagens/spidermoralesfig.jpg" alt="spidermoralesfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/3AxYaD3qTc" target="_blank">Shopee: R$ 169,99</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Megaman ou Rush<br>Miniatura 3D 10cm</p>
+                <img src="imagens/megamanfig.jpg" alt="megamanfig">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/30e8Nu4Tob" target="_blank">Shopee a partir: R$ 42,42</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Pokébola Decorada<br>Miniatura 3D</p>
+                <img src="imagens/pokeboladeco.jpg" alt="pokeboladeco">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1g8knzVyOA" target="_blank">Shopee: R$ 29,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">MiniFunko Pokémon<br>PVC 10cm</p>
+                <img src="imagens/minifunko.jpg" alt="minifunko">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/1qSB0IVL3D" target="_blank">Shopee: R$ 22,90</a>
+                </div>
+            </div>
+            <div class="produto">
+                <p class="produto-titulo">Chibi Pokémon<br>PVC 10cm</p>
+                <img src="imagens/chibipoke.jpg" alt="chibipoke">
+                <div class="links-oferta">
+                    <a class="link-shopee" href="https://s.shopee.com.br/20lbCbUhiG" target="_blank">Shopee a partir: R$ 29,00</a>
                 </div>
             </div>
         </div>
-        <div>
-            <h3 class="destaque-todos">VÍDEOS</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <a href="#"><img src="imagens/6.png" alt="sample"></a>
-            <a href="#"><img src="imagens/7.png" alt="sample"></a>
-            <a href="#"><img src="imagens/8.png" alt="sample"></a>
-            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+
+
+        <div class="sessoes">
+            <h2 class="titulo" id="videos">VÍDEOS</h2><a class="link-whatsapp"
+                href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+            <p class="destaque-ofertas">Destaques do Canal Bigodeimes</p><a class="topo" href="#home">Voltar ao
+                Topo</a>
         </div>
-        <div>
-            <h3 class="destaque-todos">ANÁLISES</h3><a href="#" class="ver-mais">Ver +</a> <br>
-            <a href="#"><img src="imagens/6.png" alt="sample"></a>
-            <a href="#"><img src="imagens/7.png" alt="sample"></a>
-            <a href="#"><img src="imagens/8.png" alt="sample"></a>
-            <a href="#"><img src="imagens/8.png" alt="sample"></a>
-            <a href="#"><img src="imagens/8.png" alt="sample"></a>
+        <div class="youtube">
+            <a href="https://youtu.be/C77Nvh6H-xs" target="_blank"><img src="imagens/maletathumb.jpg"
+                    alt="thumbmaleta"></a>
+
+            <a href="https://youtu.be/aMywU901DT0" target="_blank"><img src="imagens/thumbpropara.jpg"
+                    alt="thumbpropara"></a>
+
+            <a href="https://youtu.be/ZwuW7amH-tA" target="_blank"><img src="imagens/thumbdockport.jpg"
+                    alt="thumbdockport"></a>
+
+            <a href="https://youtu.be/xSnIX1bYlw8" target="_blank"><img src="imagens/thumbflipgrip.jpg"
+                    alt="thumbflipgrip"></a>
+
+            <a href="https://youtu.be/ISf3PYP13Iw" target="_blank"><img src="imagens/thumbretroswitch.jpg"
+                    alt="thumbretroswitch"></a>
+
+            <a href="https://youtu.be/S57Y55gr2W4" target="_blank"><img src="imagens/thumbborrachajoy.jpg"
+                    alt="thumbborrachajoy"></a>
+
+            <a href="https://youtu.be/z7dfji24ZMw" target="_blank"><img src="imagens/thumbmegax1.jpg"
+                    alt="thumbmegax1"></a>
+
+            <a href="https://youtu.be/mRQCmi-2KBo" target="_blank"><img src="imagens/thumbmegax2.jpg"
+                    alt="thumbmegax2"></a>
+
+            <a href="https://youtu.be/4C1brIOO-rg" target="_blank"><img src="imagens/thumbdetonaredblue.jpg"
+                    alt="thumbdetonaredblue"></a>
+
+            <a href="https://youtu.be/yKg_b_KeyFM" target="_blank"><img src="imagens/thumbgoldesilve.jpg"
+                    alt="thumbgoldesilve"></a>
+
+            <a href="https://youtu.be/vAXqjNp_vbg" target="_blank"><img src="imagens/thummewtworedblue.jpg"
+                    alt="thummewtworedblue"></a>
+
+            <a href="https://youtu.be/Dj75A6Fq3tM" target="_blank"><img src="imagens/thumbmewredblue.jpg"
+                    alt="thumbmewredblue"></a>
+
+            <a href="https://youtu.be/z7phVacpC4M" target="_blank"><img src="imagens/thumdigi01.jpg"
+                    alt="thumdigi01"></a>
+
+            <a href="https://youtu.be/Tmu6kwegOv0" target="_blank"><img src="imagens/thumbdinheirredblue.jpg"
+                    alt="thumbdinheirredblue"></a>
+
+            <a href="https://youtu.be/3rGosUC85Ys" target="_blank"><img src="imagens/thumbtrocaredblue.jpg"
+                    alt="thumbtrocaredblue"></a>
+
+
         </div>
+        <!--
+        <div class="sessoes">
+            <h2 class="titulo" id="analises">ANÁLISES</h2><a class="link-whatsapp"
+                        href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                        Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+                <p class="destaque-ofertas">Destaques do Canal Bigodeimes</p><a class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+
+        <div class="sessoes">
+            <h2 class="titulo" id="contato">CONTATO</h2><a class="link-whatsapp"
+                        href="https://whatsapp.com/channel/0029VbAeEPoATRSfjcyrEq0b" target="_blank"> Acesse Nosso Canal de
+                        Ofertas <img class="icone-whatsapp" src="imagens/whatsapp.png" alt="Ícone do WhatsApp"></a>
+                <p class="destaque-ofertas">Destaques do Canal Bigodeimes</p><a class="topo" href="#home">Voltar ao Topo</a>
+        </div>
+  -->
+
 
     </main>
-    <FOOTer>
 
-    </FOOTer>
+    <footer>
+        <p>Site desenvolvido por <a
+                href="https://www.instagram.com/chrystopher.goncalves/profilecard/?igsh=MWRnazI5eDV1NjEzZA=="
+                target="_blank">Chrystopher Gonçalves</a> para a comunidade <a
+                href="https://www.youtube.com/@bigodeimes" target="_blank">Bigodeimes</a> &reg;</p>
+    </footer>
 
 </body>
 
